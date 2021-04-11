@@ -1,0 +1,28 @@
+.container {
+  // display: grid;
+  // grid-template-columns: auto auto;
+  border-radius: 5px;
+  background-color: aquamarine;
+  overflow: scroll;
+  width: 1200px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(31, 1fr);
+  border-radius: 1px;
+}
+
+.cells {
+  display: grid;
+  grid-template-columns: repeat(31, 1fr);
+  border: 1px;
+  div {
+    min-width: 10px;
+    min-height: 1.5em;
+    background-color: white;
+    border: 1px solid grey;
+    border-right: none;
+    border-top: none;
+  }
+}
