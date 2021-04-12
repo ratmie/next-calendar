@@ -16,13 +16,45 @@
 .cells {
   display: grid;
   grid-template-columns: repeat(31, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   border: 1px;
-  div {
+  .cell {
     min-width: 10px;
     min-height: 1.5em;
     background-color: white;
     border: 1px solid grey;
     border-right: none;
     border-top: none;
+    z-index: 0;
+    @for $i from 1 through 31 {
+      &:nth-child(#{$i}) {
+        grid-column: #{$i} / #{$i + 1};
+        grid-row: 1 / 2;
+        z-index: 0;
+      }
+    }
+  }
+
+  .schedule {
+    background-color: lightsalmon;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    min-width: 10px;
+    min-height: 10px;
+    z-index: 2;
+    margin: 3px;
+  }
+}
+.schedules {
+  display: grid;
+  grid-template-columns: repeat(31, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+
+  .schedule {
+    background-color: lightsalmon;
+    grid-columns: 1/5;
+    grid-rows: 1/2;
+    min-width: 10px;
+    min-height: 10px;
   }
 }

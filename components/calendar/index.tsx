@@ -13,9 +13,13 @@ const Calendar = ({ rows = 5, columns = 31 }: Props) => {
       </div>
       <div className={styles.cells}>
         {[...Array(rows * columns).keys()].map((i) => (
-          <div> </div>
+          <div className={styles.cell}> </div>
         ))}
+        <div className={styles.schedule}>aaa</div>
       </div>
+      {/* <div className={styles.schedules}>
+        <div children={styles.schedule}></div>
+      </div> */}
     </div>
   );
 };
